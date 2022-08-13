@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { MenuIcon } from "@heroicons/react/solid";
 import { Link, NavLink, EmojiSunglasses } from "~/components";
-import { withRouter } from "next/router";
 
 const links = [
   {
@@ -20,7 +19,7 @@ const links = [
   },
 ];
 
-export const Nav = withRouter(({ router }) => {
+export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleLinkClick = () => setIsOpen(false);
 
@@ -76,6 +75,6 @@ export const Nav = withRouter(({ router }) => {
       </div>
     </nav>
   );
-});
+};
 
 export default Nav;
