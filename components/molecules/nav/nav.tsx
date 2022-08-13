@@ -22,11 +22,7 @@ const links = [
 
 export const Nav = withRouter(({ router }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleLinkClick = () => console.log("clicked");
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [router.pathname]);
+  const handleLinkClick = () => setIsOpen(false);
 
   return (
     <nav className="w-full flex justify-between">

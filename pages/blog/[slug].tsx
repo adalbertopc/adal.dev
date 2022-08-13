@@ -2,9 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { Link, Markdown } from "~/components";
 import { Post } from "~/interfaces/post.interface";
 
-import { getPost, getPosts } from "~/lib/posts";
-
-// import blogStyles from "~/styles/blog.css";
+import { getPostBySlug, getPosts } from "~/lib/posts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await getPosts({
@@ -22,7 +20,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const post = await getPost(params?.slug as string);
+  const post = await getPostBySlug(params?.slug as string);
   return {
     props: {
       post,
