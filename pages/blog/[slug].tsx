@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Link } from "~/components";
+import { Link, Markdown } from "~/components";
 import { Post } from "~/interfaces/post.interface";
 
 import { getPost, getPosts } from "~/lib/posts";
@@ -42,7 +42,8 @@ export default function PostSingle({ post }: { post: Post }) {
           day: "2-digit",
         })}{" "}
       </p>
-      {/* <BlogMarkdown markdown={post.body_markdown} /> */}
+
+      <Markdown value={post.body_markdown} />
 
       <Link href={post.url} showExternalIcon className="mt-4">
         Read on <b className="ml-1">DEV.TO</b>

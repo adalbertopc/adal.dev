@@ -15,6 +15,8 @@ export interface Post {
   title: string;
   description: string;
   readable_publish_date: string;
+  body_html: string;
+  body_markdown: string;
   slug: string;
   path: string;
   url: string;

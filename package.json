@@ -12,13 +12,17 @@
     "@heroicons/react": "^1.0.6",
     "clsx": "^1.2.1",
     "next": "12.2.5",
+    "parse-numeric-range": "^1.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.3",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@types/node": "18.7.2",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
+    "@types/react-syntax-highlighter": "^15.5.4",
     "autoprefixer": "^10.4.8",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.5",
