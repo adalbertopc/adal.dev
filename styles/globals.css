@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
-
 h1,
 h2,
 h3,
@@ -27,7 +25,7 @@ option {
 
 @layer utilities {
   .container {
-    @apply mx-auto max-w-screen-md px-6 lg:px-0;
+    @apply mx-auto max-w-screen-md px-6;
   }
 
   svg {

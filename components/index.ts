@@ -3,6 +3,7 @@ export * from "./atoms/navLink";
 export * from "./atoms/section";
 export * from "./atoms/separator";
 export * from "./atoms/markdown";
+export * from "./atoms/sunglasses";
 
 export * from "./molecules/nav";
 export * from "./molecules/projectCard";

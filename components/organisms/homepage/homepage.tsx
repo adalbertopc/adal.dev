@@ -17,7 +17,6 @@ interface HomepageProps {
 
 export const Homepage: React.FC<HomepageProps> = ({ projects, posts }) => (
   <>
-    <Separator />
     <Section>
       <Hero />
     </Section>

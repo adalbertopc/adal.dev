@@ -14,13 +14,15 @@ export const ProjectCard: React.FC<Project> = ({
 }: Project) => (
   <div className="flex items-center justify-between p-4 transition-colors bg-slate-50 hover:bg-slate-200 rounded-md shadow-sm">
     <div className="flex items-center w-full">
-      <Image
-        className="mt-1 w-8 h-8 rounded-full self-start"
-        src={`/assets/icons/${topics[0]}.svg`}
-        alt={topics[0]}
-        width={32}
-        height={32}
-      />
+      {topics[0] && (
+        <Image
+          className="mt-1 w-8 h-8 rounded-full self-start"
+          src={`/assets/icons/${topics[0]}.svg`}
+          alt={topics[0]}
+          width={32}
+          height={32}
+        />
+      )}
       <div className="w-full ml-2">
         <h3 className="text-lg font-bold capitalize">
           <Link href={url} target="_blank">

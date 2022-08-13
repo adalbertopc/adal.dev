@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function Blog({ posts }: { posts: Post[] }) {
   return (
-    <Section title="Blog" className="pt-0">
+    <Section title="Blog">
       <PostsList posts={posts} />
     </Section>
   );

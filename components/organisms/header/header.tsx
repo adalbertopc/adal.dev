@@ -1,13 +1,13 @@
-import { Nav } from "~/components";
+import { Nav, Separator } from "~/components";
 
 export const Header = () => {
   return (
-    <header className="py-4 flex items-center justify-between">
-      <Nav />
-      <div className="w-[104px] flex justify-end">
-        <div className="w-10 h-10 bg-red-500"></div>
-      </div>
-    </header>
+    <>
+      <header className="bg-white fixed sm:static w-full left-0 px-6 sm:px-0 py-4 flex items-center justify-between">
+        <Nav />
+      </header>
+      <Separator />
+    </>
   );
 };
 

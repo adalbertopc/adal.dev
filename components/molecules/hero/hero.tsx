@@ -15,11 +15,11 @@ export const Hero: React.FC = () => (
     <div className="hidden sm:flex">
       <div className="w-36">
         <Image
-          className="rounded-full"
+          className="rounded-full border-8 border-white shadow-lg"
           src="/assets/img/adal.jpeg"
           alt="Adalberto Prado"
-          width={144}
-          height={144}
+          width={160}
+          height={160}
         />
       </div>
     </div>

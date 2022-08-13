@@ -8,7 +8,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="container">
       <Header />
-      <main>{children}</main>
+      <main className="mt-[68px] sm:mt-0">{children}</main>
     </div>
   );
 };

@@ -1,0 +1,12 @@
+.shadow {
+  /* drop-shadow: 0 8px 24px #0040ff1a; */
+  @apply transition-all cursor-pointer;
+  -webkit-filter: drop-shadow(0 8px 24px #0040ff1a);
+  filter: drop-shadow(0 8px 24px #0040ff1a);
+}
+.shadow:hover {
+  /*  drop-shadow: 0 8px 36px #0040ff4d;*/
+  @apply transition-all scale-105;
+  -webkit-filter: drop-shadow(0 8px 36px #0040ff4d);
+  filter: drop-shadow(0 8px 36px #0040ff4d);
+}
