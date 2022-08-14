@@ -4,6 +4,7 @@ export * from "./atoms/section";
 export * from "./atoms/separator";
 export * from "./atoms/markdown";
 export * from "./atoms/sunglasses";
+export * from "./atoms/seo";
 
 export * from "./molecules/nav";
 export * from "./molecules/projectCard";

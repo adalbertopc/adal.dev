@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { Section, PostsList } from "~/components";
+import { Section, PostsList, SEO } from "~/components";
 import { Post } from "~/interfaces/post.interface";
 import { getPosts } from "~/lib/posts";
 
@@ -17,8 +17,11 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function Blog({ posts }: { posts: Post[] }) {
   return (
-    <Section title="Blog">
-      <PostsList posts={posts} />
-    </Section>
+    <>
+      <SEO title="Blog" description="Blog with Web Development articles" />
+      <Section title="Blog">
+        <PostsList posts={posts} />
+      </Section>
+    </>
   );
 }

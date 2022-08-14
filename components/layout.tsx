@@ -1,4 +1,4 @@
-import { Header } from "~/components";
+import { Header, SEO } from "~/components";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -6,9 +6,12 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="container">
-      <Header />
-      <main className="mt-[68px] sm:mt-0">{children}</main>
-    </div>
+    <>
+      <SEO />
+      <div className="container">
+        <Header />
+        <main className="mt-[68px] sm:mt-0">{children}</main>
+      </div>
+    </>
   );
 };
