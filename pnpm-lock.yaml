@@ -10,6 +10,7 @@ specifiers:
   clsx: ^1.2.1
   eslint: 8.21.0
   eslint-config-next: 12.2.5
+  keen-slider: ^6.7.0
   next: 12.2.5
   parse-numeric-range: ^1.3.0
   postcss: ^8.4.16
@@ -23,6 +24,7 @@ specifiers:
 dependencies:
   '@heroicons/react': 1.0.6_react@18.2.0
   clsx: 1.2.1
+  keen-slider: 6.7.0
   next: 12.2.5_biqbaboplfbrettd7655fr4n2y
   parse-numeric-range: 1.3.0
   react: 18.2.0
@@ -1542,6 +1544,10 @@ packages:
       array-includes: 3.1.5
       object.assign: 4.1.3
     dev: true
+
+  /keen-slider/6.7.0:
+    resolution: {integrity: sha512-tsxUE2PXCRQZcZsLmFY5S4UK0yStQd9Dw/qnH57RyXDTUr3XMDhoAOkPbOQT68lGNSpghBcEftPfcgggYoHFTA==}
+    dev: false
 
   /kleur/4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}

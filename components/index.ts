@@ -12,6 +12,7 @@ export * from "./molecules/projectsList";
 export * from "./molecules/postCard";
 export * from "./molecules/postsList";
 export * from "./molecules/hero";
+export * from "./molecules/careerSlider";
 
 export * from "./organisms/header";
 export * from "./organisms/homepage";
