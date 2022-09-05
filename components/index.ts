@@ -5,6 +5,7 @@ export * from "./atoms/separator";
 export * from "./atoms/markdown";
 export * from "./atoms/sunglasses";
 export * from "./atoms/seo";
+export * from "./atoms/JobThumb";
 
 export * from "./molecules/nav";
 export * from "./molecules/projectCard";
@@ -12,7 +13,7 @@ export * from "./molecules/projectsList";
 export * from "./molecules/postCard";
 export * from "./molecules/postsList";
 export * from "./molecules/hero";
-export * from "./molecules/careerSlider";
+export * from "./molecules/JobsSlider";
 
 export * from "./organisms/header";
 export * from "./organisms/homepage";
