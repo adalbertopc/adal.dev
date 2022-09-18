@@ -6,6 +6,7 @@ import {
   ProjectsList,
   PostsList,
   Link,
+  FeaturedProject,
 } from "~/components";
 import { Post } from "~/interfaces/post.interface";
 import { Project } from "~/interfaces/project.interface";
@@ -21,9 +22,20 @@ export const Homepage: React.FC<HomepageProps> = ({ projects, posts }) => (
       <Hero />
     </Section>
     <Separator />
+    <Section title="Featured Project">
+      <FeaturedProject
+        title="FIFA World Cup 2022 Qatar Album Tracker"
+        description="A web application to track the FIFA World Cup 2022 Qatar Album. It is built with Remix, TailwindCSS, Supabase and Prisma."
+        image="/assets/img/qatar.png"
+        liveUrl="https://qatar.adal.dev"
+        githubUrl="https://github.com/adalbertopc/album-qatar-2022"
+      />
+    </Section>
+    <Separator />
     <Section
       title="Projects"
-      description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum eius quaerat veritatis, tempora quibusdam ullam et molestias ad! Quia debitis officiis reprehenderit illo veniam, accusantium aspernatur saepe nemo ab sit?"
+      description="
+      A collection of public projects I have worked on. Most of them are built with Javascript / Typescript."
     >
       <ProjectsList projects={projects} />
 

@@ -14,6 +14,8 @@ export * from "./molecules/postCard";
 export * from "./molecules/postsList";
 export * from "./molecules/hero";
 export * from "./molecules/JobsSlider";
+export * from "./molecules/FeaturedProject";
 
 export * from "./organisms/header";
 export * from "./organisms/homepage";
+export * from "./organisms/Footer";

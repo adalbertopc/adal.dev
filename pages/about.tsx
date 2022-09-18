@@ -4,7 +4,9 @@ import { jobs } from "~/data/jobs";
 
 export default function About() {
   return (
-    <Section title="About Me" className="pt-4">
+    <Section title="About Me" className="pt-12">
+      {/* in development alert */}
+      <p className="my-8">In development...</p>
       <CareerSlider slides={jobs} />
     </Section>
   );
