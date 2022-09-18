@@ -26,7 +26,7 @@ export const Homepage: React.FC<HomepageProps> = ({ projects, posts }) => (
       <FeaturedProject
         title="FIFA World Cup 2022 Qatar Album Tracker"
         description="A web application to track the FIFA World Cup 2022 Qatar Album. It is built with Remix, TailwindCSS, Supabase and Prisma."
-        image="/assets/img/qatar.png"
+        image="/assets/img/album.png"
         liveUrl="https://qatar.adal.dev"
         githubUrl="https://github.com/adalbertopc/album-qatar-2022"
       />
