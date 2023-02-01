@@ -1,0 +1,21 @@
+---
+import BlogCard from "./blog-card.astro";
+
+const { posts } = Astro.props;
+---
+
+<div class="grid gap-4">
+  {
+    posts?.map(
+      ({ data: { title, createdAt, description, slug, readingTime } }) => (
+        <BlogCard
+          title={title}
+          createdAt={createdAt}
+          description={description}
+          slug={slug}
+          readingTime={readingTime}
+        />
+      )
+    )
+  }
+</div>

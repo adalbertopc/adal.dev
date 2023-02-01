@@ -1,0 +1,29 @@
+---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+
+const { title } = Astro.props;
+---
+
+<style is:global>
+  .container {
+    @apply max-w-screen-md;
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="container">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>

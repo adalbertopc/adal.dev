@@ -1,0 +1,57 @@
+---
+import { Image } from "@astrojs/image/components";
+import ArrowTopRightOnSquare from "astro-heroicons/solid/ArrowTopRightOnSquare.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  liveUrl: string;
+  githubUrl: string;
+}
+
+const { title, description, image, liveUrl, githubUrl } = Astro.props;
+---
+
+<div class="grid sm:grid-cols-2 gap-4">
+  <div class="">
+    <a href={liveUrl} target="_blank" rel="noreferrer">
+      <Image
+        src={image}
+        alt={title}
+        width={400}
+        class="rounded-xl hover:scale-105 transition-all"
+        format="png"
+        fit="contain"
+        aspectRatio="16:9"
+      />
+    </a>
+  </div>
+  <div class="flex flex-col gap-4">
+    <h2 class="text-2xl font-bold">{title}</h2>
+    <p class="text-gray-500">{description}</p>
+    <div class="flex gap-2">
+      <a
+        href={liveUrl}
+        target="_blank"
+        class="inline-flex gap-2 text-sm font-semibold px-4 py-3 transition-all bg-black hover:bg-opacity-80 text-white rounded-lg"
+      >
+        Live <ArrowTopRightOnSquare width={16} />
+      </a>
+      <a
+        href={githubUrl}
+        target="_blank"
+        class="inline-flex gap-2 text-sm font-semibold px-4 py-3 transition-all bg-black hover:bg-opacity-80 text-white rounded-lg"
+      >
+        Source Code{" "}
+        <img
+          src="/assets/icons/github.svg"
+          alt="github"
+          class="invert"
+          width={16}
+          height={16}
+        />
+      </a>
+    </div>
+  </div>
+</div>

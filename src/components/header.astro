@@ -1,0 +1,27 @@
+---
+import Navbar from "./navbar.astro";
+
+const links = [
+  {
+    href: "/blog",
+    label: "Blog",
+  },
+
+  {
+    href: "/about",
+    label: "About",
+  },
+  {
+    href: "/contact",
+    label: "Contact",
+  },
+];
+---
+
+<nav class="w-full flex justify-between">
+  <div class="bg-red py-4 w-full">
+    <div class="shadow-none mx-0 rounded-none p-0">
+      <Navbar links={links} />
+    </div>
+  </div>
+</nav>

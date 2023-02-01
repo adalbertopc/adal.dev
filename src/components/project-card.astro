@@ -1,0 +1,78 @@
+---
+import ArrowTopRightOnSquare from "astro-heroicons/solid/ArrowTopRightOnSquare.astro";
+
+interface Props {
+  name: string;
+  sourceUrl: string;
+  deployUrl?: string;
+  description?: string;
+  image: string;
+  topics: string[];
+}
+
+const { name, sourceUrl, deployUrl, description, topics } = Astro.props;
+---
+
+<div
+  class="flex items-center justify-between p-4 transition-colors bg-slate-50 hover:bg-slate-200 rounded-md shadow-sm"
+>
+  <div class="flex items-center w-full">
+    {
+      topics[0] && (
+        <img
+          class="mt-1 w-8 h-8 rounded-full self-start"
+          src={`/assets/icons/${topics[0]}.svg`}
+          alt={topics[0]}
+          width={32}
+          height={32}
+        />
+      )
+    }
+    <div class="w-full ml-2">
+      <h3 class="text-lg font-bold">
+        <a href={sourceUrl} target="_blank">
+          {name}
+        </a>
+      </h3>
+      <p class="text-sm mb-2">{description}</p>
+      <div class="flex gap-2 mb-4">
+        {
+          topics
+            .slice(1)
+            .map((topic: string) => (
+              <img
+                src={`/assets/icons/${topic}.svg`}
+                alt={topic}
+                width={20}
+                height={20}
+              />
+            ))
+        }
+      </div>
+
+      <div class="flex gap-4 items-center">
+        {
+          sourceUrl && (
+            <a
+              href={sourceUrl}
+              class="inline-flex items-center gap-1 text-xs font-semibold"
+            >
+              Source Code <ArrowTopRightOnSquare width={16} />
+            </a>
+          )
+        }
+        {
+          deployUrl && (
+            <a
+              href={deployUrl}
+              target="_blank"
+              class="inline-flex items-center gap-1 text-xs font-semibold"
+            >
+              Live Preview <ArrowTopRightOnSquare width={16} />
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>

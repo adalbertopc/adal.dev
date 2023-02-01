@@ -1,0 +1,15 @@
+[
+  {
+    "name": "adal.dev",
+    "description": "My personal website",
+    "topics": ["nextjs", "typescript", "tailwindcss"],
+    "deployUrl": "https://adal.dev",
+    "sourceUrl": "https://github.com/adalbertopc/adal.dev"
+  },
+  {
+    "name": "Snackzone App",
+    "description": "A Food Ordering App made with React Native.",
+    "topics": ["react", "javascript"],
+    "sourceUrl": "https://github.com/adalbertopc/snackzone-app"
+  }
+]
