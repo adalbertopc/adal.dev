@@ -1,5 +1,6 @@
 ---
 import Navbar from "./navbar.astro";
+import Separator from "./separator.astro";
 
 const links = [
   {
@@ -18,10 +19,13 @@ const links = [
 ];
 ---
 
-<nav class="w-full flex justify-between">
-  <div class="bg-red py-4 w-full">
-    <div class="shadow-none mx-0 rounded-none p-0">
-      <Navbar links={links} />
+<header>
+  <nav class="w-full flex justify-between">
+    <div class="bg-red py-4 w-full">
+      <div class="shadow-none mx-0 rounded-none p-0">
+        <Navbar links={links} />
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+  <Separator />
+</header>

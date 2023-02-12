@@ -1,8 +1,10 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
+import Section from "../components/section.astro";
 ---
 
-<MainLayout>
-  <h1 class="text-4xl font-bold mb-4">About page</h1>
-  <a href="/">Go back</a>
+<MainLayout title="About me">
+  <Section title="About me">
+    <a href="/">Go back</a>
+  </Section>
 </MainLayout>

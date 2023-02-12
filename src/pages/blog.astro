@@ -2,12 +2,13 @@
 import { getCollection } from "astro:content";
 import MainLayout from "../layouts/main-layout.astro";
 import BlogList from "../components/blog-list.astro";
+import Section from "../components/section.astro";
 
 const allBlogPosts = await getCollection("blog");
-console.log(allBlogPosts);
 ---
 
-<MainLayout>
-  <h1>Blog</h1>
-  <BlogList posts={allBlogPosts} />
+<MainLayout title="Blog">
+  <Section title="Blog">
+    <BlogList posts={allBlogPosts} />
+  </Section>
 </MainLayout>

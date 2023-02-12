@@ -7,7 +7,7 @@ const { posts } = Astro.props;
 <div class="grid gap-4">
   {
     posts?.map(
-      ({ data: { title, createdAt, description, slug, readingTime } }) => (
+      ({ slug, data: { title, createdAt, description, readingTime } }) => (
         <BlogCard
           title={title}
           createdAt={createdAt}

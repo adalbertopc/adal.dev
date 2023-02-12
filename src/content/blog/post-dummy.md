@@ -2,7 +2,7 @@
 title: My first post
 description: A simple test post
 slug: first-post
-createdAt: 29-01-2023
+createdAt: 01/29/2023
 readingTime: 2
 ---
 
