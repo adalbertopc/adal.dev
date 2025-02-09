@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  liveUrl?: string;
+  sourceCodeUrl?: string;
+}
+
+const { title, description, liveUrl, sourceCodeUrl } = Astro.props;
+---
+
+<article class="mb-4">
+  {
+    liveUrl ? (
+      <a
+        href={liveUrl}
+        target="_blank"
+        class="font-medium italic hover:underline"
+      >
+        <h3 class="inline-block font-medium italic hover:underline mb-2">
+          {title}
+        </h3>
+      </a>
+    ) : (
+      <h3 class="inline-block font-medium italic mb-2">{title}</h3>
+    )
+  }
+  {liveUrl && <span class="inline text-xs font-light">/ Live</span>}
+  <div class="ml-2">
+    <p class="text-justify mb-2 text-sm">
+      {description}
+    </p>
+    {
+      sourceCodeUrl && (
+        <p class="mb-4 text-xs">
+          <a
+            href={sourceCodeUrl}
+            target="_blank"
+            class="font-medium italic hover:underline"
+          >
+            Source code
+          </a>
+        </p>
+      )
+    }
+  </div>
+</article>

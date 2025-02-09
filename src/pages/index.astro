@@ -1,6 +1,143 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
+import HomeSection from "../components/home-section.astro";
+import Job from "../components/job.astro";
+import Project from "../components/project.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <MainLayout title="Software engineer">
+  <main>
+    <p class="text-justify mb-4 text-sm">
+      With experience in fintech and e-commerce, specializing in React/Next.js
+      and Python applications. Currently building user onboarding solutions at
+      <a
+        href="https://www.konfio.mx"
+        target="_blank"
+        class="font-medium italic hover:underline"
+      >
+        Konfío</a
+      >, focusing on scalable and secure financial systems.
+    </p>
+
+    <HomeSection title="Projects">
+      <Project
+        title="Investment Calculator"
+        description="A simple astro + svelte application that calculates the compund interest of a given investment and a given annual interest rate."
+        liveUrl="https://calculadorarendimientos.com"
+      />
+      <Project
+        title="Panini's World Cup 2022 Album tracker"
+        description="A simple web application that tracks the progress of the Panini's World Cup 2022 album."
+        sourceCodeUrl="https://github.com/adalbertopc/album-qatar-2022"
+      />
+    </HomeSection>
+
+    <HomeSection title="Current Position">
+      <Job
+        title="Software Engineer"
+        company="Konfío"
+        companyUrl="https://www.konfio.mx"
+        startDate="July 2024"
+        endDate="present"
+        keyPoints={[
+          "Built responsive and accessible React components for complex financial forms, implementing real-time validation and dynamic user feedback.",
+          "Architected and implemented robust API endpoints with comprehensive unit testing coverage.",
+          "Collaborating with cross-functional teams to deliver high-quality software solutions.",
+          "Implementing robust monitoring strategies with Grafana, Cloudwatch and New Relic tools.",
+        ]}
+      />
+    </HomeSection>
+
+    <HomeSection title="Previous Experiences">
+      <Job
+        title="Frontend Developer"
+        company="Ben & Frank"
+        companyUrl="https://www.benandfrank.com"
+        startDate="February 2022"
+        endDate="April 2024"
+        keyPoints={[
+          "Assisting with the migration of an Odoo-based online store to a React (Next.js) web application.",
+          "Established engineering excellence by creating comprehensive TypeScript/React style guides.",
+          "Implemented atomic design principles and component documentation in Storybook, demonstrating strong architecture skills.",
+          "Developed robust testing strategies, indicating focus on code quality and maintainability.",
+        ]}
+      />
+      <Job
+        title="Shopify Developer"
+        company="Team54"
+        companyUrl="https://www.linkedin.com/company/team54/"
+        startDate="November 2020"
+        endDate="February 2022"
+        keyPoints={[
+          "Deep expertise in Shopify customization and optimization",
+          "Demonstrated measurable impact on store performance and load times",
+          "Experience with JSON templates migration and architecture modernization",
+        ]}
+      />
+    </HomeSection>
+
+    <HomeSection title="Freelance">
+      <Job
+        title="Software Engineer"
+        company="Cefis"
+        companyUrl="https://www.cefis.mx"
+        startDate="January 2022"
+        endDate="July 2022"
+        keyPoints={[
+          "Migrated a spreadsheet-based system to a full web application dashboard.",
+          "Worked closely with the client to understand their needs and create a scalable and user-friendly application that streamlined their processes.",
+        ]}
+      />
+
+      <Job
+        title="Shopify Developer"
+        company="MightyWizards"
+        companyUrl="https://www.linkedin.com/company/mighty-wizards-technologies"
+        startDate="January 2021"
+        endDate="March 2021"
+        keyPoints={[
+          "Built a Shopify application for an international client (France), using technologies such as Next.js, Koa, and the Shopify API.",
+        ]}
+      />
+    </HomeSection>
+
+    <HomeSection title="Education">
+      <Job
+        title="Bachelor of Software Engineering"
+        company="Instituto Tecnológico de Sonora"
+        companyUrl="https://www.itson.mx"
+        startDate="2018"
+        endDate="2022"
+        keyPoints={[
+          "Built a Shopify application for an international client (France), using technologies such as Next.js, Koa, and the Shopify API.",
+        ]}
+      />
+    </HomeSection>
+
+    <HomeSection title="Skills">
+      <ul
+        class="list-disc ml-8 mb-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 text-sm"
+      >
+        <li>React</li>
+        <li>Next.js</li>
+        <li>TypeScript</li>
+        <li>Node.js</li>
+        <li>Python</li>
+        <li>Flask</li>
+        <li>PostgreSQL</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+        <li>Shopify</li>
+        <li>Liquid</li>
+        <li>AWS</li>
+        <li>Grafana</li>
+        <li>Cloudwatch</li>
+        <li>New Relic</li>
+        <li>Git</li>
+        <li>Docker</li>
+      </ul>
+    </HomeSection>
+  </main>
+  <Footer />
 </MainLayout>

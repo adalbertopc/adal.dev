@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+html {
+  font-family: "Merriweather";
+  font-weight: 300;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}

@@ -11,11 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.13.0",
-    "@astrojs/tailwind": "^3.0.0",
-    "astro": "^2.0.0",
-    "astro-heroicons": "^0.3.0",
+    "@fontsource/merriweather": "^5.1.1",
+    "@tailwindcss/vite": "^4.0.4",
+    "astro": "5.2.5",
     "clsx": "^1.2.1",
-    "tailwindcss": "^3.0.24"
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^4.0.4"
   }
 }

@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  companyUrl: string;
+  startDate: string;
+  endDate: string;
+  keyPoints?: any[];
+}
+
+const { title, company, companyUrl, keyPoints, startDate, endDate } =
+  Astro.props;
+---
+
+<article class="py-2 px-2 hover:bg-zinc-800 transition-all rounded-sm">
+  <details class="[&>summary]:list-none">
+    <summary class="cursor-pointer">
+      <h3 class="leading-tight">
+        <a
+          href={companyUrl}
+          target="_blank"
+          class="font-medium italic hover:underline"
+        >
+          {company}</a
+        >,
+        <span class="font-medium italic">{title}</span>
+        <span class="text-xs font-light">/ {startDate} - {endDate}</span>
+      </h3>
+    </summary>
+    <div class="mt-3">
+      <ul class="list-disc ml-8 mb-4 text-justify">
+        {keyPoints?.map((keyPoint) => <li class="mb-1 text-sm">{keyPoint}</li>)}
+      </ul>
+    </div>
+  </details>
+</article>

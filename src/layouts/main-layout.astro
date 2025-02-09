@@ -1,4 +1,10 @@
 ---
+import "../styles/global.css";
+import "@fontsource/merriweather/300.css";
+import "@fontsource/merriweather/400.css";
+import "@fontsource/merriweather/700.css";
+import "@fontsource/merriweather/900.css";
+
 interface Props {
   title?: String;
 }
@@ -14,15 +20,11 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title} | adal.dev</title>
   </head>
-  <body>
-    <div class="container">
+  <body class="bg-zinc-900 text-zinc-300">
+    <div class="container p-4 md:p-8 max-w-2xl">
+      <h1 class="text-xl font-bold">adalberto prado</h1>
+      <h2 class="text-lg font-light mb-4">software engineer</h2>
       <slot />
     </div>
   </body>
 </html>
-
-<style is:global>
-  .container {
-    @apply max-w-screen-md;
-  }
-</style>
