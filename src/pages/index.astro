@@ -1,143 +1,119 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
-import HomeSection from "../components/home-section.astro";
-import Job from "../components/job.astro";
-import Project from "../components/project.astro";
-import Footer from "../components/footer.astro";
+import Section from "../components/section.astro";
+import Entry from "../components/entry.astro";
+
+const experience = [
+  {
+    title: "Ben & Frank",
+    meta: "Frontend Developer",
+    href: "https://www.benandfrank.com",
+    period: "2022 — 24",
+  },
+  {
+    title: "Team54",
+    meta: "Shopify Developer",
+    href: "https://www.linkedin.com/company/team54/",
+    period: "2020 — 22",
+  },
+  {
+    title: "Cefis",
+    meta: "Software Engineer, freelance",
+    href: "https://www.cefis.mx",
+    period: "2022",
+  },
+  {
+    title: "MightyWizards",
+    meta: "Shopify Developer, freelance",
+    href: "https://www.linkedin.com/company/mighty-wizards-technologies",
+    period: "2021",
+  },
+];
+
+const tools = [
+  { title: "MacBook Pro", meta: "M3 Pro" },
+  { title: "AirPods Max", meta: "everyday audio" },
+  { title: "NuPhy Air V3", meta: "low-profile mechanical" },
+  { title: "Logitech MX Master 3s", meta: "pointer" },
+  { title: "Starlink", meta: "connectivity" },
+];
+
+const socials = [
+  { label: "GitHub", href: "https://github.com/adalbertopc" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/adalberto-prado/" },
+  { label: "X", href: "https://x.com/adalcodes" },
+];
 ---
 
-<MainLayout title="Software engineer">
-  <main>
-    <p class="text-justify mb-4 text-sm">
-      With experience in fintech and e-commerce, specializing in React/Next.js
-      and Python applications. Currently building user onboarding solutions at
-      <a
+<MainLayout title="Software Engineer">
+  <header>
+    <h1 class="text-2xl font-semibold tracking-tight">Adalberto Prado</h1>
+    <p class="mt-1 font-mono text-sm text-muted">Software Engineer</p>
+    <p class="mt-6 max-w-md text-sm leading-relaxed text-muted">
+      I build for <span class="text-fg">fintech</span> and <span class="text-fg"
+        >e-commerce</span
+      >, working mostly with React, Next.js and Python on scalable, secure
+      systems. Currently at {" "}<a
         href="https://www.konfio.mx"
         target="_blank"
-        class="font-medium italic hover:underline"
-      >
-        Konfío</a
-      >, focusing on scalable and secure financial systems.
+        rel="noopener noreferrer"
+        class="text-fg decoration-line hover:decoration-fg hover:underline"
+        >Konfío</a
+      >.
     </p>
+  </header>
 
-    <HomeSection title="Projects">
-      <Project
-        title="Investment Calculator"
-        description="A simple astro + svelte application that calculates the compund interest of a given investment and a given annual interest rate."
-        liveUrl="https://calculadorarendimientos.com"
-      />
-      <Project
-        title="Panini's World Cup 2022 Album tracker"
-        description="A simple web application that tracks the progress of the Panini's World Cup 2022 album."
-        sourceCodeUrl="https://github.com/adalbertopc/album-qatar-2022"
-      />
-    </HomeSection>
+  <Section label="Now">
+    <Entry
+      title="Konfío"
+      meta="Software Engineer"
+      href="https://www.konfio.mx"
+      period="2024 — Now"
+    />
+    <p class="pt-1 text-sm leading-relaxed text-muted">
+      Building user-onboarding for financial products — accessible React
+      interfaces, resilient API endpoints and observability with Grafana,
+      CloudWatch and New Relic.
+    </p>
+  </Section>
 
-    <HomeSection title="Current Position">
-      <Job
-        title="Software Engineer"
-        company="Konfío"
-        companyUrl="https://www.konfio.mx"
-        startDate="July 2024"
-        endDate="present"
-        keyPoints={[
-          "Built responsive and accessible React components for complex financial forms, implementing real-time validation and dynamic user feedback.",
-          "Architected and implemented robust API endpoints with comprehensive unit testing coverage.",
-          "Collaborating with cross-functional teams to deliver high-quality software solutions.",
-          "Implementing robust monitoring strategies with Grafana, Cloudwatch and New Relic tools.",
-        ]}
-      />
-    </HomeSection>
+  <Section label="Work">
+    {experience.map((job) => <Entry {...job} />)}
+  </Section>
 
-    <HomeSection title="Previous Experiences">
-      <Job
-        title="Frontend Developer"
-        company="Ben & Frank"
-        companyUrl="https://www.benandfrank.com"
-        startDate="February 2022"
-        endDate="April 2024"
-        keyPoints={[
-          "Assisting with the migration of an Odoo-based online store to a React (Next.js) web application.",
-          "Established engineering excellence by creating comprehensive TypeScript/React style guides.",
-          "Implemented atomic design principles and component documentation in Storybook, demonstrating strong architecture skills.",
-          "Developed robust testing strategies, indicating focus on code quality and maintainability.",
-        ]}
-      />
-      <Job
-        title="Shopify Developer"
-        company="Team54"
-        companyUrl="https://www.linkedin.com/company/team54/"
-        startDate="November 2020"
-        endDate="February 2022"
-        keyPoints={[
-          "Deep expertise in Shopify customization and optimization",
-          "Demonstrated measurable impact on store performance and load times",
-          "Experience with JSON templates migration and architecture modernization",
-        ]}
-      />
-    </HomeSection>
+  <Section label="Tools">
+    {tools.map((tool) => <Entry {...tool} />)}
+  </Section>
 
-    <HomeSection title="Freelance">
-      <Job
-        title="Software Engineer"
-        company="Cefis"
-        companyUrl="https://www.cefis.mx"
-        startDate="January 2022"
-        endDate="July 2022"
-        keyPoints={[
-          "Migrated a spreadsheet-based system to a full web application dashboard.",
-          "Worked closely with the client to understand their needs and create a scalable and user-friendly application that streamlined their processes.",
-        ]}
-      />
+  <Section label="Projects">
+    <p class="py-1.5 text-sm text-muted">
+      Soon <span class="font-mono text-faint">— in the works.</span>
+    </p>
+  </Section>
 
-      <Job
-        title="Shopify Developer"
-        company="MightyWizards"
-        companyUrl="https://www.linkedin.com/company/mighty-wizards-technologies"
-        startDate="January 2021"
-        endDate="March 2021"
-        keyPoints={[
-          "Built a Shopify application for an international client (France), using technologies such as Next.js, Koa, and the Shopify API.",
-        ]}
-      />
-    </HomeSection>
+  <Section label="Education">
+    <Entry
+      title="Instituto Tecnológico de Sonora"
+      meta="B.S. Software Engineering"
+      href="https://www.itson.mx"
+      period="2018 — 22"
+    />
+  </Section>
 
-    <HomeSection title="Education">
-      <Job
-        title="Bachelor of Software Engineering"
-        company="Instituto Tecnológico de Sonora"
-        companyUrl="https://www.itson.mx"
-        startDate="2018"
-        endDate="2022"
-        keyPoints={[
-          "Built a Shopify application for an international client (France), using technologies such as Next.js, Koa, and the Shopify API.",
-        ]}
-      />
-    </HomeSection>
-
-    <HomeSection title="Skills">
-      <ul
-        class="list-disc ml-8 mb-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 text-sm"
-      >
-        <li>React</li>
-        <li>Next.js</li>
-        <li>TypeScript</li>
-        <li>Node.js</li>
-        <li>Python</li>
-        <li>Flask</li>
-        <li>PostgreSQL</li>
-        <li>MySQL</li>
-        <li>MongoDB</li>
-        <li>Shopify</li>
-        <li>Liquid</li>
-        <li>AWS</li>
-        <li>Grafana</li>
-        <li>Cloudwatch</li>
-        <li>New Relic</li>
-        <li>Git</li>
-        <li>Docker</li>
-      </ul>
-    </HomeSection>
-  </main>
-  <Footer />
+  <footer class="mt-20 border-t border-line pt-6">
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      {
+        socials.map((s) => (
+          <a
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-mono text-xs text-muted transition-colors hover:text-fg"
+          >
+            {s.label}
+          </a>
+        ))
+      }
+    </nav>
+  </footer>
 </MainLayout>

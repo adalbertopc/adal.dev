@@ -1,0 +1,20 @@
+---
+interface Props {
+  label: string;
+  note?: string;
+}
+
+const { label, note } = Astro.props;
+---
+
+<section class="mt-14 grid gap-4 sm:grid-cols-[7rem_1fr]">
+  <div class="flex items-baseline justify-between sm:block">
+    <h2 class="font-mono text-xs uppercase tracking-widest text-faint">
+      {label}
+    </h2>
+    {note && <span class="font-mono text-xs text-faint sm:hidden">{note}</span>}
+  </div>
+  <div class="space-y-1">
+    <slot />
+  </div>
+</section>

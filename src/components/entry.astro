@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  meta: string;
+  href?: string;
+  period?: string;
+}
+
+const { title, meta, href, period } = Astro.props;
+---
+
+<div class="group flex items-baseline justify-between gap-4 py-1.5">
+  <p class="text-sm leading-relaxed">
+    {
+      href ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium decoration-line hover:decoration-fg hover:underline"
+        >
+          {title}
+        </a>
+      ) : (
+        <span class="font-medium">{title}</span>
+      )
+    }
+    <span class="text-muted"> · {meta}</span>
+  </p>
+  {
+    period && (
+      <span class="shrink-0 font-mono text-xs text-faint tabular-nums">
+        {period}
+      </span>
+    )
+  }
+</div>
